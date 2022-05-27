@@ -15,12 +15,21 @@ Trips.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    destination: {
+    departure_airport: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     arrival_airport: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    departure_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    carbon_footprint: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
