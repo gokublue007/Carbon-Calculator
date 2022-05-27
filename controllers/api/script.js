@@ -1,10 +1,9 @@
-const userNameInput = document.getElementById('username');
-const productInput = document.getElementById('product');
-const reviewInput = document.getElementById('review');
-const reviewForm = document.getElementById('review-form');
+
+const flightInput = document.getElementById('flight');
+const flightForm = document.getElementById('flight-form');
 
 
-const postReview = (tripDetails) =>
+const postFlight = (tripDetails) =>
   // Fetch accepts a URL and an options object where you can declare the HTTP method, the request body, and any headers.
   fetch('https://www.carboninterface.com/api/v1/estimates', {
     headers: {
@@ -30,18 +29,19 @@ const postReview = (tripDetails) =>
     });
 
 // Listen for when the form is submitted
-reviewForm.addEventListener('submit', (e) => {
+flightForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Create a new review object from the input values
-  const newReview = {
-    username: userNameInput.value.trim(),
-    product: productInput.value.trim(),
-    review: reviewInput.value.trim(),
+  const newFlight = {
+    tripName:
+    depAirport: userNameInput.value.trim(),
+    desAirport: userNameInput.value.trim(),
+
   };
 
   // Call our postReview method to make a POST request with our `newReview` object.
-  postReview(newReview)
-    .then((data) => alert(`Review added! Review ID: ${data.body.review_id}`))
+  postFlight(newFlight)
+    .then((data) => alert(`Flight added! Flight ID: ${data.body.review_id}`))
     .catch((err) => console.error(err));
 });
