@@ -6,3 +6,4 @@ node_modules
 .eslintignore
 .eslintrc.json
 package-lock.json
+.vscode
