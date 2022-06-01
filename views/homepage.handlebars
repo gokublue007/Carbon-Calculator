@@ -1,4 +1,4 @@
-{{!-- <!-- Loop over each object in the projects array -->
+{{!-- {{!-- <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -64,4 +64,131 @@
   </div>
 </div>
 
-<script src="/js/login.js"></script>
+<script src="/js/login.js"></script> --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏔 Park Information</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+</head>
+
+<body>
+  
+    <section class="hero is-small" >
+      <div class="hero-body">
+        <h1 class="title has-text-centered is-1" id="colorName">Park Pass</h1>
+        <p class="subtitle has-text-centered" id="sub">Plan your trip with ease!</p>
+      </div>
+    </section>
+
+    <div class="container">
+    <aside>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <h2 class="title has-text-centered is-2" id="hero">WELCOME</h2>
+          <p class="subtitle has-text-centered" id="sub">Please enter the National Park you would like information on!</p>
+          <div class="field has-addons">
+            <form class="control is-expanded px-0 input-div">
+              <input class="input is-success" id="tags" type="text" placeholder="Search"></input>
+            </form>
+            <div class="control px-0">        
+              <button class="button is-responsive is-rounded is-success is-outlined" id="searchParkButton"
+                type="submit">Search Park</button>
+            </div>
+          </div>
+        </article>
+      </div>    
+    </aside>
+
+    <main class="m-3">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-parent ">
+          <article class="tile is-child box">
+            <p class="title has-text-centered is-2" id="hero">Recently Viewed</p>
+            <p class="subtitle has-text-centered" id="sub">National Parks</p>
+            <button id="clearSavedParksButton" class="button is-danger is-fullwidth"><span class="icon is-small mr-1"><i class="fas fa-trash-alt"></i></span>Clear Saves</button>
+            <div class="content" id="savedParks">
+              <p>You don't have any saved parks yet.</p>
+            </div>
+          </article>
+          <div class="tile is-child box has-text-centered">
+            <p class="title is-2" id="hero">Fee Free Days</p>
+            <p class="subtitle" id="sub">Come experience the national parks!</p>
+            <p class="pb-2">Saturday, April 16</p>
+            <p class="pb-2">Thursday, August 4</p>
+            <p class="pb-2">Saturday, September 24</p>
+            <p class="pb-2">Friday, November 11</p>
+          </div>
+        </div>
+        <div class="tile is-parent is-8">
+          <article class="tile is-child box">
+            <p class="title has-text-centered is-2" id="hero">Search Results</p>
+            <p class="subtitle has-text-centered" id="sub"> Park Info, Hiking, Weather:</p>
+            <div class="content custom-content">
+              <!-- Information Tabs -->
+              <div class="tabs is-centered is-boxed">
+                <ul>
+                  <li class="is-active" data-target="park-info-content">
+                    <a>
+                      <span class="icon is-small"><i class="fas fa-info-circle"></i></span>
+                      <span>Park Info</span>
+                    </a>
+                  </li>
+                  <li data-target="hiking-content">
+                    <a>
+                      <span class="icon is-small"><i class="fas fa-hiking"></i></span>
+                      <span>Hiking</span>
+                    </a>
+                  </li>
+                  <li data-target="weather-content">
+                    <a>
+                      <span class="icon is-small"><i class="fas fa-cloud-sun"></i></span>
+                      <span>Weather</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="tab-content">            
+                <div  class="has-text-centered" id="park-info-content">
+                  <!-- Park info here -->
+                </div>
+                <!-- Search Results Content -->
+                <div class="is-hidden" id="hiking-content">
+                  <div class="mx-auto" id = "map">
+                    <!-- Map with trail markers will display here -->
+                  </div>
+                </div>
+                <div class="is-hidden has-text-centered has-text-weight-bold" id="weather-content">
+                  <!--Info will go here-->
+                  </div>
+            </div>
+            </div>
+          </article>
+        </div>
+    </main>
+  </div>
+    <footer class="footer" id="contactUs">
+      <div class="content has-text-centered">
+        <p>
+          <strong id="sub" >Park Pass App </strong> by <a href="https://github.com/gokublue007/Park-Pass" class="footer-link"> Peter, Shlomo, Marcus, Elias </a>
+        </p>
+      </div>
+    </footer>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Szh6txcLm9SOSbuZV-CyqKVbqljMkTM&libraries=places,geometry"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./Assets/js/script.js"></script>
+</body>
+
+</html>
