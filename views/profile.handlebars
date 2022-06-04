@@ -11,15 +11,27 @@
     <form class="form new-project-form">
       <div class="form-group">
         <label for="departure">Departure Airport:</label>
-        <input class="form-input" type="text" id="departure" name="departure" />
+        <select class="form-input" type="text" id="departure" name="departure">
+          <option value="DEN">Denver</option>
+          <option value="SFO">San Francisco</option>
+          <option value="IAD">Washington-Dulles</option>
+          <option value="LGA">New York-LaGuardia</option>
+          <option value="ORD">Chicago-O'Hare</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="destination">Arrival Airport:</label>
-        <input class="form-input" type="text" id="destination" name="destination" />
+        <select class="form-input" type="text" id="destination" name="destination">
+          <option value="DEN">Denver</option>
+          <option value="SFO">San Francisco</option>
+          <option value="IAD">Washington-Dulles</option>
+          <option value="LGA">New York-LaGuardia</option>
+          <option value="ORD">Chicago-O'Hare</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="dep-date">Departure Date:</label>
-        <textarea class="form-input" id="dep-date" name="dep-date"></textarea>
+        <input class="form-input" type="date" id="dep-date" name="dep-date">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Add</button>
