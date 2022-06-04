@@ -38,7 +38,7 @@ router.get('/trip/:id', async (req, res) => {
       ],
     });
 
-    const trips = tripsData.get({ plain: true });
+    const trip = tripsData.get({ plain: true });
 
     res.render('trip', {
       ...trip,
