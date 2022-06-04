@@ -28,7 +28,7 @@ const postFlight = (newFlight) =>
     });
 
 // Listen for when the form is submitted
-flightForm.addEventListener('submit', (e) => {
+flightForm.addEventListener('form-group', (e) => {
   e.preventDefault();
 
   // Create a new review object from the input values
