@@ -44,7 +44,7 @@ THEN I am presented with a carbon footprint estimate
 ```
 
 ## Technologies
-```
+
 - JavaScript
 - Node.js
 - MYSQL
@@ -53,7 +53,6 @@ THEN I am presented with a carbon footprint estimate
 - Bcrypt
 - Faker
 - Handlebars
-```
 
 ## Installation
 ```
@@ -88,20 +87,20 @@ npm i faker
 ```
 
 ## Usage
-```
+
 Run npm run seed
 
-Run npm start and go to listining port
-```
+Run npm start and go to listening port
 
 ## Contributing
-```
+
 All you need is Name and Github link
-```
 
 ## Test
+
+To run:
 ```
-To run; run - npm start
+npm start
 ```
 
 ## Questions:
