@@ -52,6 +52,7 @@ THEN I am presented with a carbon footprint estimate
 - Sequelize
 - Bcrypt
 - Faker
+- Handlebars
 ```
 
 ## Installation
