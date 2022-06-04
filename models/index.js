@@ -1,6 +1,5 @@
 const User = require('./User');
 const Trips = require('./Trips');
-// const faker = require('faker');
 
 User.hasMany(Trips, {
   foreignKey: 'user_id',
