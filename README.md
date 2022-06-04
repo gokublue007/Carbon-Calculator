@@ -105,14 +105,14 @@ npm start
 
 ## Questions:
 
-If you have any questions about the repo, open an issue or contact me at [Elias Vasquez](https://github.com/gokublue007/), [Ryan Goldberg](https://github.com/ryann127), [Christopher Ballard](https://github.com/ballardcryan) You can find more of my work at [Carbon-Calculator](https://github.com/gokublue007/carbon-calculator)! Thank You!
+If you have any questions about the repo, open an issue or contact me at [Elias Vasquez](https://github.com/gokublue007/), [Ryann Goldberg](https://github.com/ryann127), [Christopher Ballard](https://github.com/ballardcryan) You can find more of my work at [Carbon-Calculator](https://github.com/gokublue007/carbon-calculator)! Thank You!
 
 
 ## Contact Information:
 
   - Github: [Carbon-Calculator](https://github.com/gokublue007/carbon-calculator)
   - [Elias Vasquez](https://github.com/gokublue007/), 
-  - [Ryan Goldberg](https://github.com/ryann127), 
+  - [Ryann Goldberg](https://github.com/ryann127), 
   - [Christopher Ballard](https://github.com/ballardcryan) 
 
 
