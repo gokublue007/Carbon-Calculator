@@ -1,14 +1,15 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
+  const tripName = document.querySelector('#trip-name').value;
   const depInput = document.querySelector('#departure').value;
   const desInput = document.querySelector('#arrival').value;
   const date = document.querySelector('#dep-date').value;
 
-  if (name && depInput && desInput && date) {
+  if (tripName && depInput && desInput && date) {
     const response = await fetch(`/api/trip`, {
       method: 'POST',
-      body: JSON.stringify({ name, depInput, desInput, date }),
+      body: JSON.stringify({ tripName, depInput, desInput, date }),
       headers: {
         'Content-Type': 'application/json',
       },
