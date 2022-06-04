@@ -29,7 +29,8 @@ Trips.init(
     },
     carbon_footprint: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: 0.00
     },
     date_created: {
       type: DataTypes.DATE,

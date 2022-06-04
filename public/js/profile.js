@@ -1,15 +1,15 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const tripName = document.querySelector('#trip-name').value;
-  const depInput = document.querySelector('#departure').value;
-  const desInput = document.querySelector('#arrival').value;
-  const date = document.querySelector('#dep-date').value;
+  const name = document.querySelector('#trip-name').value;
+  const departure_airport = document.querySelector('#departure').value;
+  const arrival_airport = document.querySelector('#destination').value;
+  const departure_date = document.querySelector('#dep-date').value;
 
-  if (tripName && depInput && desInput && date) {
+  if (name && departure_airport && arrival_airport && departure_date) {
     const response = await fetch(`/api/trip`, {
       method: 'POST',
-      body: JSON.stringify({ tripName, depInput, desInput, date }),
+      body: JSON.stringify({ name, departure_airport, arrival_airport, departure_date }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -18,7 +18,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create trip');
     }
   }
 };
