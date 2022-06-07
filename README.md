@@ -16,11 +16,10 @@
 
 ## Deployment
 
-![Project Image](.)
+<!-- ![Project Image](./img/Screen Shot 2022-06-07 at 4.48.31 PM-min.jpg) -->
 
 - [Website Deployment](https://glacial-earth-08692.herokuapp.com/)
 
-- [Video Demonstration](https://drive.google.com/file/d/1kiDlETCKRlGwdctM88CnNF17vWwDlj2V/view?usp=sharing)
 
 
 ---
